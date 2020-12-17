@@ -34,7 +34,7 @@ class SuperHero(Hero):
         """blablabla"""
         super().__init__(name, lavel, race)
         self.magiclevel = magiclevel
-        self.magic = 100
+        self.__magic = 100     # __ Запрещает доступ к magic из вне класса
 
     def makemagic(self):
         self.magic -= 10
