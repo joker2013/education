@@ -24,3 +24,23 @@ class Hero():
 
     def set_health(self, new_health):
         self.health = new_health
+
+
+# наследование класса
+class SuperHero(Hero):
+    """Class to Create Super"""
+
+    def __init__(self, name, lavel, race, magiclevel):
+        """blablabla"""
+        super().__init__(name, lavel, race)
+        self.magiclevel = magiclevel
+        self.magic = 100
+
+    def makemagic(self):
+        self.magic -= 10
+
+    # Рассширение функции
+    def show_hero(self):
+        discription = (self.name + " Уровень " + str(self.level) + " Раса " + self.race + " Здоровье " + str(
+            self.health) + " Магия " + str(self.magic)).title()
+        print(discription)
